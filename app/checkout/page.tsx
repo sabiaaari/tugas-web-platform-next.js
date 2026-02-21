@@ -1,6 +1,9 @@
 import Link from "next/link";
 
-export default function CheckoutPage() {
+export default async function CheckoutPage({ searchParams }: { searchParams: Promise<{ price?: string }> }) {
+  const resolvedParams = await searchParams;
+  const priceData = resolvedParams.price;
+  const finalPrice = priceData ? new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(Number(priceData)) : "Rp 0";
   return (
     <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
@@ -13,7 +16,7 @@ export default function CheckoutPage() {
         <div className="bg-gray-50 rounded-xl p-5 mb-8 border border-gray-200">
           <div className="flex justify-between items-center mb-4 pb-4 border-b border-gray-200">
             <span className="text-gray-600 font-medium">Total Tagihan</span>
-            <span className="font-bold text-lg text-gray-900">Rp Sesuai Produk</span>
+            <span className="font-bold text-2xl text-primary">{finalPrice}</span>
           </div>
           <div className="flex justify-between items-center mb-3">
             <span className="text-gray-600">Metode</span>

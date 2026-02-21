@@ -12,7 +12,7 @@ export default function CartPage() {
           Keranjangmu masih kosong nih. Yuk, temukan aroma tanda tanganmu di katalog eksklusif kami!
         </p>
         <div className="flex flex-col gap-3">
-          <Link href="/product" className="bg-primary text-white px-6 py-3 rounded-xl hover:bg-pink-700 transition font-bold shadow-lg shadow-primary/30 w-full block">
+          <Link href="/" className="bg-primary text-white px-6 py-3 rounded-xl hover:bg-pink-700 transition font-bold shadow-lg shadow-primary/30 w-full block">
             Mulai Belanja
           </Link>
           <Link href="/" className="text-gray-500 hover:text-primary transition font-medium py-2 block">

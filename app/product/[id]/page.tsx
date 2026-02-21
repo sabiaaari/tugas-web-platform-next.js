@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+
 
 interface Product {
   id: number;
@@ -69,7 +71,10 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
               <p className="text-3xl font-bold text-gray-900 mb-6">{formatRupiah(product.price)}</p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/checkout" className="flex-1 bg-gray-900 text-white py-4 rounded-xl hover:bg-gray-800 transition font-bold text-lg shadow-lg flex items-center justify-center gap-2">
+                <Link
+                  href={`/checkout?price=${product.price * 15000}`}
+                  className="flex-1 bg-gray-900 text-white py-4 rounded-xl hover:bg-gray-800 transition font-bold text-lg shadow-lg flex items-center justify-center gap-2"
+                >
                   <span className="material-icons">payments</span> Beli Sekarang
                 </Link>
                 <Link href="/cart" className="flex-1 bg-primary text-white py-4 rounded-xl hover:bg-pink-700 transition font-bold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
