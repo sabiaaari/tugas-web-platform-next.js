@@ -84,13 +84,13 @@ export default function KatalogClient({ initialProducts }: { initialProducts: Pr
                             <a href="/tentang" className="text-gray-600 hover:text-primary transition font-medium">Tentang Toko</a>
                         </div>
                         <div>
-                            <button
-                                className="text-gray-600 hover:text-primary transition relative p-2"
-                                onClick={() => alert("Keranjang belanja sedang dikembangkan.")}
+                            <Link
+                                href="/cart"
+                                className="text-gray-600 hover:text-primary transition relative p-2 flex items-center justify-center"
                             >
                                 <span className="material-icons">shopping_bag</span>
                                 <span className="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center border border-white">0</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ export default function KatalogClient({ initialProducts }: { initialProducts: Pr
                 {/* Background Image dengan Overlay */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://images.unsplash.com/photo-1616933934399-56ce5b40e704?auto=format&fit=crop&q=80&w=1920"
+                        src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=format&fit=crop&q=80&w=1920"
                         alt="Koleksi Parfum Mewah"
                         className="w-full h-full object-cover opacity-50"
                     />
@@ -109,12 +109,12 @@ export default function KatalogClient({ initialProducts }: { initialProducts: Pr
                 </div>
 
                 {/* Konten Hero */}
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-start justify-center min-h-[70vh]">
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-start justify-center min-h-[50vh]">
                     <span className="text-primary font-semibold tracking-widest uppercase text-sm mb-4 block animate-fade-in">
                         Elegansi dalam Setiap Semprotan
                     </span>
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight max-w-2xl">
-                        Temukan Aroma <br /> <span className="text-secondary font-serif italic">Tanda Tanganmu</span>
+                        Temukan Aroma <br /> <span className="text-secondary font-serif italic">Representasi Dirimu</span>
                     </h1>
                     <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed">
                         Eksplorasi koleksi eksklusif parfum internasional. Dari aroma floral yang lembut hingga musk yang memikat, temukan identitas aromamu hari ini.
@@ -183,23 +183,30 @@ export default function KatalogClient({ initialProducts }: { initialProducts: Pr
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <span className="material-icons text-primary">storefront</span>
-                            <h3 className="text-2xl font-bold">AromaVibe Studio</h3>
+                            <h3 className="text-2xl font-bold">Toko AromaVibe</h3>
                         </div>
                         <p className="text-gray-400 mb-4">Pusat keanggunan dan aroma memikat untuk wanita modern.</p>
                         <div className="flex items-center gap-3 text-gray-300 mb-2">
                             <span className="material-icons">location_on</span>
-                            <p>Jl. Teknologi No. 42, Kota Inovasi, 12345</p>
+                            <p>Ruko Asia Plaza, Jl. HZ Mustofa Blok B-01, Yudanegara, Kec, Cihideung, Kota. Tasikmalaya, Jawa Barat</p>
                         </div>
                         <div className="flex items-center gap-3 text-gray-300 mb-2">
                             <span className="material-icons">schedule</span>
                             <p>Senin - Sabtu: 09.00 - 20.00 WIB</p>
                         </div>
                     </div>
-                    <div className="bg-gray-800 rounded-lg flex items-center justify-center p-8 text-center border border-gray-700">
-                        <div>
-                            <span className="material-icons text-4xl text-gray-500 mb-2">map</span>
-                            <p className="text-gray-400">Integrasi Google Maps dapat disematkan di sini.</p>
-                        </div>
+                    {/* Integrasi Google Maps Asli */}
+                    <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 h-64 md:h-full relative min-h-[300px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15828.625219975602!2d108.2072074!3d-7.3363371!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f576c7c25dd8f%3A0x911e5e4095a1b4a2!2sPlaza%20Asia%20Tasikmalaya!5e0!3m2!1sid!2sid!4v1771640629705!5m2!1sid!2sid"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, position: "absolute", top: 0, left: 0 }}
+                            allowFullScreen={true}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Lokasi AromaVibe"
+                        ></iframe>
                     </div>
                 </div>
             </section>

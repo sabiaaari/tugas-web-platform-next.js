@@ -48,9 +48,9 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col md:flex-row">
           {/* Gambar Produk */}
           <div className="md:w-1/2 bg-gray-50 flex items-center justify-center p-8">
-            <img 
-              src={product.thumbnail} 
-              alt={product.title} 
+            <img
+              src={product.thumbnail}
+              alt={product.title}
               className="max-w-full h-auto object-contain mix-blend-multiply drop-shadow-xl"
             />
           </div>
@@ -64,13 +64,18 @@ export default async function ProductDetail({ params }: { params: Promise<{ id: 
             <p className="text-gray-600 mb-6 leading-relaxed">
               {product.description}
             </p>
-            
+
             <div className="mt-auto pt-8 border-t border-gray-100">
               <p className="text-3xl font-bold text-gray-900 mb-6">{formatRupiah(product.price)}</p>
-              
-              <Link href="/" className="w-full bg-primary text-white py-4 rounded-xl hover:bg-pink-700 transition font-bold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
-                <span className="material-icons">shopping_bag</span> Kembali Belanja
-              </Link>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/checkout" className="flex-1 bg-gray-900 text-white py-4 rounded-xl hover:bg-gray-800 transition font-bold text-lg shadow-lg flex items-center justify-center gap-2">
+                  <span className="material-icons">payments</span> Beli Sekarang
+                </Link>
+                <Link href="/cart" className="flex-1 bg-primary text-white py-4 rounded-xl hover:bg-pink-700 transition font-bold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                  <span className="material-icons">add_shopping_cart</span> Ke Keranjang
+                </Link>
+              </div>
             </div>
           </div>
         </div>

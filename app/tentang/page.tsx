@@ -23,9 +23,9 @@ export default function TentangPage() {
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           {/* Header Image */}
           <div className="h-64 w-full relative">
-            <img 
-              src="https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=1200" 
-              alt="AromaVibe Store" 
+            <img
+              src="https://images.unsplash.com/photo-1765568691251-07bdb8bcd935?q=80&w=1200&auto=format&fit=crop"
+              alt="Koleksi AromaVibe"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -57,7 +57,7 @@ export default function TentangPage() {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="material-icons text-gray-400">location_on</span>
-                    <span>Jl. Teknologi No. 42, Kota Inovasi</span>
+                    <span>Ruko Asia Plaza, Jl. HZ Mustofa Blok B-01, Yudanegara, Kec, Cihideung, Kota. Tasikmalaya, Jawa Barat</span>
                   </li>
                 </ul>
               </div>
